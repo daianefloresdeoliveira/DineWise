@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/tabview_home"
+        android:title="@string/home"
+        />
+    <item
+        android:id="@+id/users"
+        android:icon="@drawable/all_users"
+        android:title="@string/users_info"
+        />
+    <item
+        android:id="@+id/restaurants"
+        android:icon="@drawable/tabviewrestaurant"
+        android:title="@string/restaurants_info" />
+
+    <item
+        android:id="@+id/account"
+        android:icon="@drawable/log_out_app"
+        android:title="@string/log_out" />
+
+</menu>

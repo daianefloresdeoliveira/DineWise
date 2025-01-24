@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/rounded_card_background"
+    android:layout_marginBottom="16dp">
+
+    <ImageView
+        android:id="@+id/menuImage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded_image_border"
+        android:clipToOutline="true" />
+
+    <TextView
+        android:id="@+id/menuName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        tools:text="Avocado Toast" />
+
+    <TextView
+        android:id="@+id/menuDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#808080"
+        android:layout_marginTop="4dp"
+        tools:text="Toast topped with mashed avocado and spices." />
+
+    <TextView
+        android:id="@+id/menuPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="4dp"
+        tools:text="$5.99" />
+
+    <TextView
+        android:id="@+id/menuTopOrderTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/teal"
+        android:textStyle="italic"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        tools:text="This is a top order!" />
+</LinearLayout>

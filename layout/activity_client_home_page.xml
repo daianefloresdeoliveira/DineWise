@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster_regular"
+        android:text="DineWise"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="40dp"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/imgNotification"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle"
+        app:srcCompat="@drawable/notification" />
+
+    <ImageButton
+        android:id="@+id/btnLogOut"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgNotification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgNotification"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/log_out_user"
+        android:background="@drawable/button_image_background_transparent"
+        android:scaleType="centerInside"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:id="@+id/textTopRestaurants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/kanit_medium"
+        android:gravity="start"
+        android:shadowColor="@color/teal"
+        android:shadowRadius="4"
+        android:text="@string/top_restaurants"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollViewTopRestaurants"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTopRestaurants">
+
+        <LinearLayout
+            android:id="@+id/topRestaurantsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textNearMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/near_me"
+        android:fontFamily="@font/kanit_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        android:shadowColor="@color/teal"
+        android:shadowRadius="4"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollViewTopRestaurants"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:gravity="start"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollViewNearMe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNearMe">
+
+        <LinearLayout
+            android:id="@+id/nearMeContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textRecommended"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recommended_for_you"
+        android:fontFamily="@font/kanit_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        android:shadowColor="@color/teal"
+        android:shadowRadius="4"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollViewNearMe"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:gravity="start"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollViewRecommended"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRecommended"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/recommendedContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:itemIconSize="80dp"
+        app:itemIconTint="@color/teal"
+        app:itemTextColor="@color/teal"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu_user" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

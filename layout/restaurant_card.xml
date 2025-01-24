@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/card_background"
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="4dp">
+
+    <ImageView
+        android:id="@+id/restaurantImage"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded_image_border"
+        android:clipToOutline="true"
+        android:padding="4dp" />
+
+    <TextView
+        android:id="@+id/restaurantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/restaurant_name_card"
+        android:textAlignment="center"
+        android:textColor="@color/teal"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

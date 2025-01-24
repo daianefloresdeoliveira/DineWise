@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/tabview_home"
+        android:title="@string/home_owner_menu"
+        />
+    <item
+        android:id="@+id/menu"
+        android:icon="@drawable/tabview_menu"
+        android:title="@string/menu_owner"
+        />
+    <item
+        android:id="@+id/reservation"
+        android:icon="@drawable/tabview_reservation"
+        android:title="@string/reservation_owner" />
+    <item
+        android:id="@+id/review"
+        android:icon="@drawable/tabview_review_owner"
+        android:title="@string/review_owner" />
+    <item
+        android:id="@+id/account"
+        android:icon="@drawable/tabview_account"
+        android:title="@string/account_owner" />
+</menu>

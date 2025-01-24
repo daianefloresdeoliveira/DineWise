@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toStartOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster_regular"
+        android:text="DineWise"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="40dp"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/imgNotification"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle"
+        app:srcCompat="@drawable/notification" />
+
+    <ImageButton
+        android:id="@+id/btnLogOut"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgNotification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgNotification"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/log_out_user"
+        android:background="@drawable/button_image_background_transparent"
+        android:scaleType="centerInside"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="25dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:startIconDrawable="@drawable/tabview_search"
+        app:startIconScaleType="fitStart"
+        app:startIconTint="@color/teal"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchfield"
+            android:layout_width="364dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_border"
+            android:hint="@string/searchAdmin"
+            android:paddingStart="40dp"
+            android:textColorHint="@color/teal"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textTopRestaurants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/top_restaurants_admin"
+        android:fontFamily="@font/kanit_medium"
+        android:shadowColor="@color/teal"
+        android:shadowRadius="4"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        android:layout_marginStart="20dp"
+        android:gravity="start"
+        android:layout_marginTop="100dp"
+        />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollViewTopRestaurants"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTopRestaurants">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/food1"
+                    android:background="@drawable/rounded_image_border"
+                    android:scaleType="centerCrop"
+                    android:padding="4dp"
+                    android:clipToOutline="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/fast_food"
+                    android:textAlignment="center"
+                    android:textColor="@color/teal"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/food2"
+                    android:background="@drawable/rounded_image_border"
+                    android:scaleType="centerCrop"
+                    android:padding="4dp"
+                    android:clipToOutline="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/thai_food"
+                    android:textAlignment="center"
+                    android:textColor="@color/teal"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textNearMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/near_me_admin_home"
+        android:fontFamily="@font/kanit_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        android:shadowColor="@color/teal"
+        android:shadowRadius="4"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollViewTopRestaurants"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:gravity="start"
+        android:textSize="20sp"
+        android:layout_marginTop="0dp"
+        />
+
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollViewNearMe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNearMe">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/labanquise"
+                    android:background="@drawable/rounded_image_border"
+                    android:scaleType="centerCrop"
+                    android:padding="4dp"
+                    android:clipToOutline="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="La Banquise"
+                    android:textAlignment="center"
+                    android:textColor="@color/teal"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/schwartz"
+                    android:background="@drawable/rounded_image_border"
+                    android:scaleType="centerCrop"
+                    android:padding="4dp"
+                    android:clipToOutline="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Schwartz's Deli"
+                    android:textAlignment="center"
+                    android:textColor="@color/teal"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_admin_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollViewNearMe" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_admin_home"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password_admin_home"
+        app:layout_constraintTop_toBottomOf="@id/tvEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="5dp"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/teal"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/bottom_menu_admin"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/teal"
+        app:itemTextColor="@color/teal"
+        app:itemIconSize="50dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

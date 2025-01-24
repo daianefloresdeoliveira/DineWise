@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/background"
+    android:elevation="4dp"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Title: Client Name -->
+    <TextView
+    android:id="@+id/reviewClientName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/client_name"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:textColor="@color/black" />
+
+    <!-- Subtitle: Rating Image -->
+    <ImageView
+    android:id="@+id/reviewRatingImage"
+    android:layout_width="100dp"
+    android:layout_height="40dp"
+    android:layout_marginTop="8dp"
+    android:scaleType="fitXY"
+    android:src="@drawable/five_stars" />
+
+    <!-- Date -->
+    <TextView
+    android:id="@+id/reviewDate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:text="@string/date"
+    android:textSize="20sp"
+    android:textColor="@color/black" />
+
+    <!-- Review Text -->
+    <TextView
+    android:id="@+id/reviewText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:text="@string/this_is_the_review_content"
+    android:textSize="16sp"
+    android:textColor="@color/black"
+    android:lineSpacingExtra="4dp" />
+    </LinearLayout>

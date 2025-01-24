@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.start.IntroPage3">
+
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+
+    <TextView
+        android:id="@+id/tvTitleIntroPage3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/kanit_medium"
+        android:text="@string/title3"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:shadowColor="@color/teal"
+        android:shadowRadius="4"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="150dp"/>
+
+    <Button
+        android:id="@+id/btnClient"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/teal"
+        android:text="@string/clientIntro"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleIntroPage3"
+        android:layout_marginTop="100dp"
+        tools:layout_editor_absoluteY="423dp" />
+
+    <Button
+        android:id="@+id/btnOwner"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="176dp"
+        android:backgroundTint="#002A9D8F"
+        android:text="@string/ownerIntro"
+        android:textColor="@color/teal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/btnClient"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/teal"
+        app:strokeWidth="5dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

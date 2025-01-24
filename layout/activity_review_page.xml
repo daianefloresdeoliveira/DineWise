@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.client.ReviewPage">
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toStartOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle"
+        app:srcCompat="@drawable/logo"
+        />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster_regular"
+        android:text="@string/dinewise_name"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="40sp"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgNotification"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle"
+        app:srcCompat="@drawable/notification" />
+
+    <ImageView
+        android:id="@+id/imgLogOutS"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgNotification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgNotification"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/log_out_user"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="25dp"/>
+
+    <ImageButton
+        android:id="@+id/btnLogOut"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgNotification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgNotification"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/button_image_background_transparent"
+        app:srcCompat="@drawable/log_out_user"
+        android:scaleType="centerInside"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:id="@+id/textReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/kanit_medium"
+        android:gravity="start"
+        android:shadowColor="@color/teal"
+        android:shadowRadius="4"
+        android:text="@string/review"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginStart="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        />
+
+
+
+    <TextView
+        android:id="@+id/textNoReviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/kanit_light"
+        android:gravity="start"
+        android:text="@string/no_reviews"
+        android:textColor="@color/teal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textReview" />
+
+
+
+    <ImageButton
+        android:id="@+id/btnSAddReview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:scaleType="centerInside"
+        android:background="@drawable/button_image_background_transparent"
+        app:srcCompat="@drawable/add_review"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        android:layout_marginBottom="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textAddReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kanit_light"
+        android:gravity="center"
+        android:text="@string/add_your_review"
+        android:foregroundGravity="center"
+        android:textColor="@color/teal"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSAddReview" />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/teal"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/bottom_menu_user"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/teal"
+        app:itemTextColor="@color/teal"
+        app:itemIconSize="80dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

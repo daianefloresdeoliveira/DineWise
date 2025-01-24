@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background image -->
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Logo and title -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toStartOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster_regular"
+        android:text="@string/dinewise2"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="40sp"
+        android:layout_marginTop="20dp" />
+
+    <!-- Search bar -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:startIconDrawable="@drawable/tabview_search"
+        app:startIconScaleType="fitStart"
+        app:startIconTint="@color/teal">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/searchfield"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/custom_border"
+        android:hint="@string/search"
+        android:paddingStart="40dp"
+        android:textColorHint="@color/teal" />
+</com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Title for Top Restaurants -->
+    <TextView
+        android:id="@+id/textTopRestaurants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/kanit_medium"
+        android:gravity="start"
+        android:shadowColor="@color/teal"
+        android:shadowRadius="4"
+        android:text="@string/top_restaurants2"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"/>
+
+    <!-- Horizontal ScrollView for Top Restaurants -->
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollViewTopRestaurants"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:contentDescription="@string/scroll_view_for_top_restaurants"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTopRestaurants">
+
+        <!-- Dynamic Container for Top Restaurants -->
+        <LinearLayout
+            android:id="@+id/topRestaurantsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+    </HorizontalScrollView>
+
+    <!-- Title for Near Me Restaurants -->
+    <TextView
+        android:id="@+id/textNearMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/kanit_medium"
+        android:gravity="start"
+        android:shadowColor="@color/teal"
+        android:shadowRadius="4"
+        android:text="@string/near_me2"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontalScrollViewTopRestaurants"/>
+
+    <!-- Horizontal ScrollView for Near Me Restaurants -->
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollViewNearMe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:contentDescription="@string/scroll_view_for_top_restaurants2"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textNearMe">
+
+        <!-- Dynamic Container for Near Me Restaurants -->
+        <LinearLayout
+            android:id="@+id/nearMeContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+    </HorizontalScrollView>
+
+    <!-- Bottom Navigation (or other elements, if needed) -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:itemIconSize="80dp"
+        app:itemIconTint="@color/teal"
+        app:itemTextColor="@color/teal"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu_user" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
